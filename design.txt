@@ -1,0 +1,19 @@
+	My program creates a 2D ArrayList and fills it with zeroes to indicate empty cells. It then iterates through each cell in the grid and checks if it is empty. If it is, the program generates a random number and checks if it is valid using my verification methods. Then, it recursively calls the solving method to see if the board is solved yet. If not, the solve method returns false and continues experimenting with different cells and values. I used an ArrayList composed of Integer ArrayLists (2D ArrayList) as my board. This was effective as I was able to use methods such as list.set() and list.contains() to more efficiently search and set values in my code. I used recursive verification to solve the board. As described in the overview, my program initializes and fills a 2D ArrayList, before iterating through each cell in it, generating and verifying a random number, and then finally recursively calling its solve method to check if the Sudoku board is fully solved yet, continuing if not.
+
+My methods are as follows:
+	printBoard:
+		This method is used to neatly divide the grid into three parts using the bar (|) and print the grid out.
+	verifySquares:
+		This method divides the grid into 3x3 squares and then verifies if a given number is contained within them using inputted x and y coordinates.
+	verifyColumns:
+		This method checks if an inputted number has a duplicate within its column.
+	verifyRows:
+		This method checks if an inputted number has a duplicate within its row.
+	verifyFull:
+		This method uses all three verification methods to fully verify an inputted number
+	solve:
+		This method recursively generates random numbers and calls verifyFull to solve the board.
+	main:
+		Initializes the ArrayList and calls solve.
+
+My program was tested essentially just by writing code and then printing my grid. Once I had a functioning program, I continuously generated and checked for randomness to ensure proper behavior. I also occasionally used print statements throughout my code to account for errors in intermediate steps (like verification). A challenge that I faced when making this project was the process of figuring out my logic. I initially tried to individually verify each number, to no avail. I eventually got help from a friend and re-evaluated my logic. I then fully rewrote my code and achieved an average of 2-3ms time!
